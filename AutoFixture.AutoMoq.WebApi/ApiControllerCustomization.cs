@@ -4,7 +4,7 @@ using System;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace AutoFixture.AutoMoq.ApiControllerConventions
+namespace AutoFixture.AutoMoq.WebApi
 {
     internal class ApiControllerCustomizationBase : ICustomization
     {

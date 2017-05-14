@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Hosting;
 
-namespace AutoFixture.AutoMoq.ApiControllerConventions
+namespace AutoFixture.AutoMoq.WebApi
 {
     public class HttpRequestMessageCustomization : ICustomization
     {

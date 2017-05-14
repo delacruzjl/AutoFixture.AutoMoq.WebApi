@@ -1,7 +1,7 @@
 ﻿using Ploeh.AutoFixture;
 using Ploeh.AutoFixture.AutoMoq;
 
-namespace AutoFixture.AutoMoq.ApiControllerConventions
+namespace AutoFixture.AutoMoq.WebApi
 {
 
     public class ApiControllerConventions : CompositeCustomization
