@@ -5,7 +5,11 @@ See [http://stackoverflow.com/questions/19908385/automocking-web-api-2-controlle
 
 ## Usage
 
-When creating your Fixture, make sure you add the customize convention as:
+When creating your Fixture, make sure you add the customize conventions as:
+
+### Note
+
+You won't need to add the Moq customization, ApiControllerConventions already includes that customization.
 
 ```
   private readonly Fixture _fixture;
