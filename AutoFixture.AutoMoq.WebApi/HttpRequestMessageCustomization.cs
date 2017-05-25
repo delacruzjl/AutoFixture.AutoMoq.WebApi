@@ -9,10 +9,13 @@ namespace AutoFixture.AutoMoq.WebApi
     {
         public void Customize(IFixture fixture)
         {
+            HttpConfiguration config = new HttpConfiguration();
+            config.MapHttpAttributeRoutes();
+
             fixture.Customize<HttpRequestMessage>(c => c
             .Without(x => x.Content)
             .Do(x => x.Properties[HttpPropertyKeys.HttpConfigurationKey] =
-                new HttpConfiguration()));
+                config));
 
         }
     }
