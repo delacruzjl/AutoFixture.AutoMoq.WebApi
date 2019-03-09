@@ -1,3 +1,6 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![NuGet Badge](https://buildstats.info/nuget/AutoFixture.AutoMoq.WebApi)](https://www.nuget.org/packages/AutoFixture.AutoMoq.WebApi/)
+
 # AutoFixture.AutoMoq.WebApi
 
 See [http://stackoverflow.com/questions/19908385/automocking-web-api-2-controller] for details.
