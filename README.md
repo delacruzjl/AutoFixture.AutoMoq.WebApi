@@ -1,5 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![NuGet Badge](https://buildstats.info/nuget/AutoFixture.AutoMoq.WebApi)](https://www.nuget.org/packages/AutoFixture.AutoMoq.WebApi/)
+[![NuGet Badge](https://buildstats.info/nuget/AutoFixture.AutoMoq.WebApi)](https://www.nuget.org/packages/AutoFixture.AutoMoq.WebApi/) <span style="display: block; text-align: right;">[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)</span>
 
 # AutoFixture.AutoMoq.WebApi
 
