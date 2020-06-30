@@ -1,22 +1,26 @@
-﻿using Ploeh.AutoFixture;
+﻿using AutoFixture.Dsl;
+using AutoFixture.Kernel;
+using System;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Hosting;
 
-namespace AutoFixture.AutoMoq.WebApi
-{
-    public class HttpRequestMessageCustomization : ICustomization
-    {
-        public void Customize(IFixture fixture)
-        {
-            HttpConfiguration config = new HttpConfiguration();
+namespace AutoFixture.AutoMoq.WebApi {
+    public class HttpRequestMessageCustomization : ICustomization {
+        public void Customize(IFixture fixture) {
+            var config = new HttpConfiguration();
             config.MapHttpAttributeRoutes();
+            ComposeFakeRequest(fixture, config);
+        }
 
-            fixture.Customize<HttpRequestMessage>(c => c
-            .Without(x => x.Content)
-            .Do(x => x.Properties[HttpPropertyKeys.HttpConfigurationKey] =
-                config));
+        private static void ComposeFakeRequest(IFixture fixture, HttpConfiguration config) {
+            fixture.Customize(CustomizeRequestComposer());
 
+            Func<ICustomizationComposer<HttpRequestMessage>, ISpecimenBuilder> CustomizeRequestComposer() {
+                return composer => composer
+                    .Without(request => request.Content)
+                    .Do(request => request.Properties[HttpPropertyKeys.HttpConfigurationKey] = config);
+            }
         }
     }
 }
